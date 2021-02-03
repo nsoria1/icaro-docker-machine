@@ -1,0 +1,11 @@
+# Build de imagen 
+docker build -t icaro-bigdata-image/v1 .
+
+# Listar contenedores
+docker image ls
+
+# Crear contenedor y acceder a consola
+docker run -it icaro-bigdata-image sh
+
+# El comando exit apaga el contenedor, para volver a activarlo iniciar el contenedor y conectarse
+docker start d4d16339cef9 & docker exec -it d4d16339cef9 sh
