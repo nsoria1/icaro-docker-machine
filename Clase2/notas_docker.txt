@@ -1,0 +1,10 @@
+# Crear una imagen de docker
+docker build -t frodenas/postgresql .
+
+# Levantar un container
+docker run -d \
+    --name postgresql \
+    -p 5432:5432 \
+    -e POSTGRES_USERNAME=icaro \
+    -e POSTGRES_PASSWORD=icaro \
+    frodenas/postgresql
